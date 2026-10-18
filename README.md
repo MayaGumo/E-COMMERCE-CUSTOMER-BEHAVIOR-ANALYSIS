@@ -2,217 +2,52 @@ E-Commerce Customer Behavior Analysis
 
 Overview
 
-This repository contains data and analysis for understanding customer demographics, spending patterns, and engagement levels based on the E-commerce Customer Behavior.csv dataset. The goal of this project is to evaluate purchasing habits, discount utilization, and customer loyalty across different regions and membership tiers.
+This project analyzes customer demographic, spending, and engagement patterns using the E-commerce Customer Behavior.csv dataset. The goal is to identify purchasing trends, evaluate customer loyalty tiers, and measure the impact of discounts on overall spending.
 
-Dataset Schema
+Dataset Features
 
-The main dataset E-commerce Customer Behavior.csv contains the following attributes:
+The dataset includes the following customer information:
 
-Column Name
+Customer ID: Unique identifier for each customer
 
-Type
+Gender: Customer gender (Female, Male)
 
-Description
+Age: Age of the customer
 
-Customer ID
+City: Customer location (New York, Los Angeles, Chicago, San Francisco)
 
-Integer
+Membership Type: Loyalty tier (Gold, Silver, Bronze)
 
-Unique identifier for each customer
+Total Spend: Total purchase amount in USD
 
-Gender
+Items Purchased: Total quantity of items bought
 
-Text
+Average Rating: Customer feedback score on a scale of 1.0 to 5.0
 
-Customer gender (Female, Male)
+Discount Applied: Whether a discount code was used (True, False)
 
-Age
+Days Since Last Purchase: Recency of the last transaction
 
-Integer
+Satisfaction Level: Overall customer satisfaction status
 
-Age of the customer
+Quick Start
 
-City
-
-Text
-
-Customer location (New York, Los Angeles, Chicago, San Francisco, etc.)
-
-Membership Type
-
-Text
-
-Loyalty membership status (Gold, Silver, Bronze)
-
-Total Spend
-
-Numeric
-
-Total amount spent by the customer ($)
-
-Items Purchased
-
-Integer
-
-Total count of items purchased
-
-Average Rating
-
-Numeric
-
-Customer's average feedback score (1.0 - 5.0)
-
-Discount Applied
-
-Boolean
-
-Indicates if a discount was applied (True / False)
-
-Days Since Last Purchase
-
-Integer
-
-Recency in days since the last transaction
-
-Satisfaction Level
-
-Text
-
-Customer feedback status (Unsatisfied, Neutral, Satisfied)
-
-Sample Data Preview
-
-Customer ID
-
-Gender
-
-Age
-
-City
-
-Membership Type
-
-Total Spend
-
-Items Purchased
-
-Average Rating
-
-Discount Applied
-
-Days Since Last Purchase
-
-101
-
-Female
-
-29
-
-New York
-
-Gold
-
-1120.20
-
-14
-
-4.6
-
-True
-
-25
-
-102
-
-Male
-
-34
-
-Los Angeles
-
-Silver
-
-780.50
-
-11
-
-4.1
-
-False
-
-18
-
-103
-
-Female
-
-43
-
-Chicago
-
-Bronze
-
-510.75
-
-8
-
-3.4
-
-True
-
-42
-
-104
-
-Male
-
-30
-
-San Francisco
-
-Gold
-
-1460.30
-
-19
-
-4.7
-
-False
-
-12
-
-Setup & Usage
-
-Prerequisites
-
-Python 3.8+
-
-Pandas
-
-Running the Analysis
-
-Clone the repository:
-
-git clone https://github.com/your-username/ecommerce-customer-behavior.git
-cd ecommerce-customer-behavior
-
-
-Load the dataset using Pandas:
+To view and analyze the dataset using Python and Pandas:
 
 import pandas as pd
 
-# Load data
+# Load the dataset
 df = pd.read_csv('E-commerce Customer Behavior.csv')
 
-# Preview data
+# View the first few rows
 print(df.head())
 
 
-Key Analysis Questions
+Key Research Questions
 
-Membership Impact: How significantly does Total Spend differ across Gold, Silver, and Bronze membership tiers?
+How does spending differ across Gold, Silver, and Bronze membership tiers?
 
-Discount Effect: Does applying discounts increase overall purchasing frequency or average rating?
+Are customers who receive discounts more active or frequent buyers?
 
-Recency & Churn: What is the relationship between Days Since Last Purchase and overall customer satisfaction?
+How does customer age or location correlate with items purchased?
+
